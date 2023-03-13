@@ -19,3 +19,30 @@ print_r ($users);
 file_put_contents("users.json", json_encode($users));
 
 }
+
+function task5 ()
+{
+    $data = json_decode(file_get_contents('users.json'), true);
+    $result = [];
+    $age_sum = 0;
+    foreach ($data as $name) {
+        if (isset($result[$name['name']])) {
+            $result[$name['name']] += 1;
+        } else {
+            $result[$name['name']] = 1;
+        }
+        $age_sum = $age_sum + $name['age'];
+    }
+    print_r($result);
+}
+
+function task6 ()
+{
+    $data = json_decode(file_get_contents('users.json'), true);
+    $age_sum = 0;
+    foreach ($data as $name) {
+        $age_sum = $age_sum + $name['age'];
+    }
+    echo 'Средний возраст равен ' . $age_sum/ count($data);
+
+}
