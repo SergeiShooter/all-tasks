@@ -25,6 +25,9 @@ echo task3 (9, 10);
 echo '<br>';
 date_default_timezone_set('UTC+3');
 echo date("d.m.y H:i") . '<br>';
+$date = '2016-05-24 16:32:45';
+$timestamp = strtotime($date);
+echo strtotime($timestamp)  .  '<br>';
 
 /**
 Задание 2.5
