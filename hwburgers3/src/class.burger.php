@@ -32,7 +32,11 @@ class Burger
             $query,
             __METHOD__,
             [':user_id' => $userId,
+<<<<<<< HEAD
                 ':address' => $data['address'],
+=======
+              ':address' => $data['address'],
+>>>>>>> 47491d078a0ce672f8d0236e08623a6dafd635f5
                 ':created_at' => date('Y-m-d H:i:s'),
 
             ]
@@ -53,3 +57,7 @@ class Burger
 
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 47491d078a0ce672f8d0236e08623a6dafd635f5
